@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SisTra Imperial | Transporte Integral, Mudanzas y Logística</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para usar la fuente Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        /* Estilo personalizado para la sección Hero con la imagen de fondo */
+        .hero-section {
+            /* RUTA DE IMAGEN 1: Fondo del Hero (Camión grande con personal) */
+            background-image: url('Captura de pantalla 2025-11-03 150515.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            /* Altura mínima para que la sección sea visible */
+            min-height: 70vh; 
+        }
+        /* Overlay oscuro para mejorar la legibilidad del texto en el hero */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.65); /* Oscurecimiento de fondo */
+        }
+        /* Estilos del logo (colores corporativos basados en la imagen) */
+        .text-imperial-red {
+            color: #C0392B; /* Rojo intenso similar al del logo */
+        }
+        .bg-imperial-red {
+            background-color: #C0392B;
+        }
+        .border-imperial-red {
+            border-color: #C0392B;
+        }
+        .hover\:bg-imperial-dark {
+            background-color: #A93226;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0">
+                    <!-- RUTA DE IMAGEN 2: Logo -->
+                    <img class="h-14 w-auto" src="Diseño sin título.png" alt="SisTra Imperial Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x50/FFFFFF/000000?text=SisTra+Imperial';">
+                </a>
+                <!-- Menú de Navegación (Solo para Desktop) -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-900 hover:text-imperial-red text-lg font-medium transition duration-200">Inicio</a>
+                    <a href="#servicios" class="text-gray-900 hover:text-imperial-red text-lg font-medium transition duration-200">Servicios</a>
+                    <a href="#nosotros" class="text-gray-900 hover:text-imperial-red text-lg font-medium transition duration-200">Nosotros</a>
+                    <a href="#contacto" class="text-gray-900 hover:text-imperial-red text-lg font-medium transition duration-200">Contacto</a>
+                </div>
+                <!-- Botón de Cotización -->
+                <a href="#contacto" class="hidden md:block bg-imperial-red text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-imperial-dark transition duration-300 transform hover:scale-105">
+                    Cotiza Ahora
+                </a>
+            </div>
+        </div>
+        <!-- Menú Móvil (Oculto por simplicidad, en una app real usaría JS para mostrar/ocultar) -->
+    </nav>
+
+    <!-- Sección Hero (Inicio) -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex items-center h-full pt-20 pb-10 md:pt-0 md:pb-0">
+            <div class="text-white max-w-2xl">
+                <!-- Título principal -->
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+                    SisTra Imperial: <span class="text-imperial-red">Transporte Integral</span> de Confianza
+                </h1>
+                <!-- Subtítulo / Propuesta de Valor -->
+                <p class="text-xl md:text-2xl font-light mb-8">
+                    La <span class="font-semibold">tranquilidad</span> de un cambio bien hecho. Soluciones profesionales y seguras para Mudanzas, Fletes y Logística en Lima y provincias.
+                </p>
+                <!-- Llamada a la Acción -->
+                <a href="#servicios" class="inline-block bg-imperial-red text-white text-lg font-bold px-10 py-4 rounded-xl shadow-lg hover:bg-imperial-dark transition duration-300 transform hover:scale-105">
+                    Descubre Nuestros Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios Destacados -->
+    <section id="servicios" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">
+                Nuestras Soluciones de <span class="text-imperial-red">Transporte</span>
+            </h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                Ofrecemos un sistema de transporte integral, utilizando una flota versátil de camiones para garantizar la eficiencia y seguridad de su carga.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta de Servicio 1: Mudanzas -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 border-t-4 border-imperial-red">
+                    <svg class="w-12 h-12 text-imperial-red mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.727A8 8 0 016.343 7.273L3 10m0 0l3-3m-3 3l3 3m13.657 7.467L18.4 17.657m0 0l3-3m-3 3l3 3m-9.086-5.818L13 17.657M10 3v4a1 1 0 001 1h4a1 1 0 001-1V3" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Mudanzas Profesionales</h3>
+                    <p class="text-gray-700">
+                        Servicio completo para el traslado de hogares u oficinas. Embalaje cuidadoso, desmontaje y montaje, y transporte seguro a cualquier punto de Lima o provincia.
+                    </p>
+                </div>
+
+                <!-- Tarjeta de Servicio 2: Fletes -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 border-t-4 border-imperial-red">
+                    <svg class="w-12 h-12 text-imperial-red mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 0H7m4 2h2m4-2a2 2 0 100-4h-4a2 2 0 00-2 2v4a2 2 0 104 0v-4z" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Fletes y Carga Ligera</h3>
+                    <p class="text-gray-700">
+                        <!-- FRASE CORREGIDA -->
+                        Soluciones rápidas y económicas para el envío de paquetes, **mercancía o cargas de volumen intermedio**. Puntualidad y seguimiento **garantizados** en cada entrega.
+                    </p>
+                </div>
+
+                <!-- Tarjeta de Servicio 3: Logística General -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 border-t-4 border-imperial-red">
+                    <svg class="w-12 h-12 text-imperial-red mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Logística Empresarial</h3>
+                    <p class="text-gray-700">
+                        Soporte logístico integral para empresas. Distribución, almacenamiento temporal y manejo de grandes volúmenes de carga con la mayor eficiencia operativa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros y Flota -->
+    <section id="nosotros" class="py-16 md:py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Texto Nosotros -->
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        ¿Quiénes Somos en <span class="text-imperial-red">SisTra Imperial</span>?
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Somos un sistema de transporte integral comprometido con la excelencia. Nuestro enfoque es simple: brindar soluciones de Mudanzas, Fletes y Logística con la máxima <span class="font-semibold text-imperial-red">seguridad</span> y <span class="font-semibold text-imperial-red">eficiencia</span> en Lima y **a todo el Perú**.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        Entendemos que su carga es valiosa, por eso contamos con un equipo de profesionales experimentados y una flota versátil de camiones modernos, con **vehículos de distintas capacidades** para adaptarnos a cualquier necesidad de volumen. Mantenemos nuestra flota bajo los más altos estándares de seguridad y eficiencia.
+                    </p>
+                    <a href="#contacto" class="inline-block border-2 border-imperial-red text-imperial-red font-bold px-8 py-3 rounded-lg hover:bg-imperial-red hover:text-white transition duration-300">
+                        Habla con un Experto
+                    </a>
+                </div>
+
+                <!-- Imagen de la Flota -->
+                <div class="rounded-xl shadow-2xl overflow-hidden">
+                    <!-- RUTA DE IMAGEN 3: Flota de vehículos (Actualizada) -->
+                    <img src="Imagen de WhatsApp 2025-11-08 a las 20.28.59_4b72f502.jpg" alt="Flota de Camiones de SisTra Imperial" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/C0392B/FFFFFF?text=Nuestra+Flota';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">
+                Solicita tu <span class="text-imperial-red">Cotización</span> Ahora
+            </h2>
+            
+            <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-2xl border-t-4 border-imperial-red">
+                <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="mb-5">
+                        <!-- ETIQUETA: Nombre -->
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-imperial-red transition duration-200" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-imperial-red transition duration-200" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-imperial-red transition duration-200" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="service" class="block text-gray-700 font-medium mb-2">Tipo de Servicio</label>
+                        <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-imperial-red transition duration-200" required>
+                            <option value="">Seleccione un servicio</option>
+                            <option value="Mudanza">Mudanza</option>
+                            <option value="Flete">Flete</option>
+                            <option value="Logística General">Logística General</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <!-- CAMPO: Origen -->
+                    <div class="mb-5">
+                        <label for="origin" class="block text-gray-700 font-medium mb-2">Origen (Punto de Recojo)</label>
+                        <input type="text" id="origin" name="origin" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-imperial-red transition duration-200" placeholder="Ej: Av. Perú 123, San Martín de Porres" required>
+                    </div>
+                    
+                    <!-- CAMPO: Destino -->
+                    <div class="mb-6">
+                        <label for="destination" class="block text-gray-700 font-medium mb-2">Destino (Punto de Entrega)</label>
+                        <input type="text" id="destination" name="destination" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-imperial-red transition duration-200" placeholder="Ej: Calle Los Andes 456, Arequipa" required>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Detalles Adicionales del Requerimiento</label>
+                        <!-- PLACEHOLDER con ejemplo de pisos -->
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-imperial-red transition duration-200" placeholder="Ej: Recojo en 3er piso sin ascensor, entrega en 1er piso con ascensor." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-imperial-red text-white font-bold py-3 rounded-lg shadow-lg hover:bg-imperial-dark transition duration-300 transform hover:scale-[1.01]">
+                        Enviar Solicitud de Cotización
+                    </button>
+                    
+                    <!-- Contenedor para mensajes de estado -->
+                    <div id="form-message" class="mt-4 p-3 rounded-lg text-center hidden"></div>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Columna 1: Logo y Eslogan -->
+                <div>
+                    <!-- RUTA DE IMAGEN 2: Logo -->
+                    <img class="h-10 w-auto mb-3" src="Diseño sin título.png" alt="SisTra Imperial Logo" onerror="this.onerror=null;this.src='https://placehold.co/120x40/FFFFFF/000000?text=SisTra+Imperial';" style="filter: invert(1);">
+                    <p class="text-sm text-gray-400">
+                        La tranquilidad de un cambio bien hecho. Soluciones seguras y eficientes para su carga.
+                    </p>
+                </div>
+                
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-imperial-red">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-200">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-200">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition duration-200">Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Servicios -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-imperial-red">Servicios</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">Mudanzas</li>
+                        <li class="text-gray-400">Fletes</li>
+                        <li class="text-gray-400">Logística General</li>
+                        <li class="text-gray-400">Transporte a Provincias</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-imperial-red">Contáctenos</h3>
+                    <p class="text-gray-400 mb-2">Lima, Perú</p>
+                    <!-- Teléfono actualizado -->
+                    <p class="text-gray-400 mb-2">Teléfono: 936 803 522</p>
+                    <p class="text-gray-400 mb-2">Email: contacto@sistraimperial.com</p>
+                </div>
+            </div>
+            
+            <div class="mt-10 pt-6 border-t border-gray-800 text-center">
+                <p class="text-sm text-gray-500">&copy; 2025 SisTra Imperial. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de JavaScript para la interactividad básica del formulario -->
+    <script>
+        /**
+         * Maneja el envío del formulario de contacto (simulado).
+         * Muestra un mensaje de éxito o error al usuario sin recargar la página.
+         * @param {Event} event - El evento de envío del formulario.
+         */
+        function handleFormSubmit(event) {
+            // Previene el comportamiento predeterminado de recarga de página
+            event.preventDefault(); 
+            
+            const form = document.getElementById('contact-form');
+            const messageDiv = document.getElementById('form-message');
+            
+            // Simulación de envío de datos
+            // En una aplicación real, aquí se haría una llamada a una API (fetch)
+            
+            // Ocultar mensaje anterior
+            messageDiv.classList.add('hidden');
+            messageDiv.textContent = '';
+            
+            // Opcional: Recolectar datos para mostrarlos en la consola
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                origin: document.getElementById('origin').value,
+                destination: document.getElementById('destination').value,
+                message: document.getElementById('message').value,
+            };
+            console.log("Datos de Cotización Recibidos (Simulación):", formData);
+
+            // Pequeño retardo para simular el procesamiento de la solicitud
+            setTimeout(() => {
+                // Simulación de éxito
+                messageDiv.classList.remove('hidden');
+                messageDiv.classList.remove('bg-red-100', 'text-red-700');
+                messageDiv.classList.add('bg-green-100', 'text-green-700');
+                messageDiv.textContent = '¡Gracias! Su solicitud ha sido enviada con éxito. Nos pondremos en contacto pronto al ' + formData.phone + '.';
+                
+                // Limpiar formulario después del envío exitoso (opcional)
+                form.reset();
+            }, 1000); // Espera 1 segundo
+        }
+    </script>
+
+</body>
+</html>
