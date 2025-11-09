@@ -181,6 +181,7 @@
             </h2>
             
             <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-2xl border-t-4 border-imperial-red">
+                <!-- El evento de submit ahora llama a la función de WhatsApp -->
                 <form id="contact-form" onsubmit="handleFormSubmit(event)">
                     <div class="mb-5">
                         <!-- ETIQUETA: Nombre -->
@@ -227,9 +228,6 @@
                     <button type="submit" class="w-full bg-imperial-red text-white font-bold py-3 rounded-lg shadow-lg hover:bg-imperial-dark transition duration-300 transform hover:scale-[1.01]">
                         Enviar Solicitud de Cotización
                     </button>
-                    
-                    <!-- Contenedor para mensajes de estado -->
-                    <div id="form-message" class="mt-4 p-3 rounded-lg text-center hidden"></div>
                 </form>
             </div>
             
@@ -286,50 +284,51 @@
         </div>
     </footer>
 
-    <!-- Script de JavaScript para la interactividad básica del formulario -->
+    <!-- Script de JavaScript para la lógica de redirección a WhatsApp -->
     <script>
         /**
-         * Maneja el envío del formulario de contacto (simulado).
-         * Muestra un mensaje de éxito o error al usuario sin recargar la página.
+         * Maneja el envío del formulario, construye un mensaje pre-llenado 
+         * con los datos y redirige al usuario a WhatsApp.
          * @param {Event} event - El evento de envío del formulario.
          */
         function handleFormSubmit(event) {
             // Previene el comportamiento predeterminado de recarga de página
             event.preventDefault(); 
             
-            const form = document.getElementById('contact-form');
-            const messageDiv = document.getElementById('form-message');
+            // 1. Obtener los valores del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const origin = document.getElementById('origin').value;
+            const destination = document.getElementById('destination').value;
+            const message = document.getElementById('message').value;
             
-            // Simulación de envío de datos
-            // En una aplicación real, aquí se haría una llamada a una API (fetch)
+            // Número de WhatsApp (Perú: +51 936 803 522)
+            const whatsappNumber = '51936803522'; 
             
-            // Ocultar mensaje anterior
-            messageDiv.classList.add('hidden');
-            messageDiv.textContent = '';
+            // 2. Construir el mensaje de texto (separando líneas con %0A para salto de línea en URL)
+            const rawMessage = 
+                `¡Hola! Necesito cotizar un servicio de transporte para SisTra Imperial.%0A%0A` +
+                `*DATOS DEL SERVICIO*%0A` +
+                `*Soy:* ${name}%0A` +
+                `*Teléfono:* ${phone}%0A` +
+                `*Email:* ${email}%0A` +
+                `*Servicio Requerido:* ${service}%0A` +
+                `*Origen:* ${origin}%0A` +
+                `*Destino:* ${destination}%0A` +
+                `*Detalles Adicionales:* ${message}`;
             
-            // Opcional: Recolectar datos para mostrarlos en la consola
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                origin: document.getElementById('origin').value,
-                destination: document.getElementById('destination').value,
-                message: document.getElementById('message').value,
-            };
-            console.log("Datos de Cotización Recibidos (Simulación):", formData);
-
-            // Pequeño retardo para simular el procesamiento de la solicitud
-            setTimeout(() => {
-                // Simulación de éxito
-                messageDiv.classList.remove('hidden');
-                messageDiv.classList.remove('bg-red-100', 'text-red-700');
-                messageDiv.classList.add('bg-green-100', 'text-green-700');
-                messageDiv.textContent = '¡Gracias! Su solicitud ha sido enviada con éxito. Nos pondremos en contacto pronto al ' + formData.phone + '.';
-                
-                // Limpiar formulario después del envío exitoso (opcional)
-                form.reset();
-            }, 1000); // Espera 1 segundo
+            // 3. Codificar el mensaje para la URL
+            const encodedMessage = encodeURIComponent(rawMessage);
+            
+            // 4. Construir la URL completa de WhatsApp
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            // 5. Redirigir al usuario
+            window.location.href = whatsappURL;
+            
+            // Nota: No es necesario limpiar el formulario (form.reset()) ya que el usuario es redirigido.
         }
     </script>
 
